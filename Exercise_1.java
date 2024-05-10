@@ -3,6 +3,35 @@ class BinarySearch {
     int binarySearch(int arr[], int l, int r, int x) 
     { 
         //Write your code here
+
+        while(l<=r){
+
+            int mid = (l+r)/2;
+
+            if(x == arr[mid]) {
+                return mid;
+            }
+            else if(x < arr[mid]){
+                /*
+                 * If search value is lower than the mid of the array
+                 * change the search space to before mid
+                 * i.e 0...mid-1 is the new search space where you can find the element
+                 *
+                 * */
+                r = mid-1;
+            }
+            else{
+                /*
+                 * If search value is greater than the mid of the array
+                 * change the search space to after mid
+                 * i.e mid+1....r is the new search space where you can find the element
+                 *
+                 * */
+                l = mid+1;
+            }
+        }
+
+        return -1;
     } 
   
     // Driver method to test above 
