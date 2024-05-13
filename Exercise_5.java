@@ -1,4 +1,9 @@
 import java.util.Stack;
+
+/*
+ * Time Complexity: O(n log n)
+ * Space Complexity: O(n)
+ * */
 class IterativeQuickSort {
     void swap(int arr[], int i, int j) 
     { 
